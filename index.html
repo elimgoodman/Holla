@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="/public/jquery.js"></script>
+        <script src="/public/underscore.js"></script>
+        <script src="/public/backbone.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/public/index.js"></script>
+    </head>
+    <body>
+        <ul id="channels">
+        </ul>
+        <div id="current-channel">
+        </div>
+        <div id="message-input-container">
+            <input id="message-input" />
+        <div>
+    </body>
+
+    <script type="text/html" id="channel-tmpl">
+        <h3>Topic: <span id="topic" /><%= topic %></h3>
+        <div class="message-list-container"></div>
+        <div class="actions"></div>
+    </script>
+
+    <script type="text/html" id="channel-li-tmpl">
+        <a href='#' class="channel-name"><%= name %></a>
+    </script>
+
+    <script type="text/html" id="message-tmpl">
+        <%= from %>: <%= message %>
+    </script>
+</html>
