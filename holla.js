@@ -10,6 +10,7 @@ var express = require('express')
 
 app.use(express.static(__dirname));
 
+//FIXME: use embeds instead of plugins
 //Load all plugins
 var plugins = [];
 
