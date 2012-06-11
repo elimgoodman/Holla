@@ -240,12 +240,6 @@ $(function(){
         '#testing-irc-proxy-2'
     ];
     
-    _.each(channels, function(c){
-        irc.Channels.push(new irc.Channel({
-            name: c
-        }));
-    });
-
     socket.emit('init', {
         name: name,
         channels: channels
